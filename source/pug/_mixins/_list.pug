@@ -1,4 +1,9 @@
 mixin list(values)
-	ul(class!=attributes.class)
-		each val in values
-			li= val
+  ul(class!=attributes.class)
+    each val in values
+      li
+          img(src=val.icon)
+          span= val.titleGreen
+          |&#32;
+          span= val.titleWhite
+          p= val.text

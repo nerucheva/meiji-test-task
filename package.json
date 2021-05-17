@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build"
+  },
   "dependencies": {
     "gulp": "4.0.2",
     "bootstrap": "4.4.1",
