@@ -18,3 +18,16 @@ $(document).ready(function () {
   //     }
   //   });
 });
+
+const burger = document.getElementById("burger");
+const navigationWrapper = document.getElementById("navigation-wrapper");
+
+burger.addEventListener("click", () => {
+  if (burger.classList.contains("burger-menu_active")) {
+    burger.classList.remove("burger-menu_active");
+    navigationWrapper.classList.remove("navigation-wrapper_opened");
+  } else {
+    burger.classList.add("burger-menu_active");
+    navigationWrapper.classList.add("navigation-wrapper_opened");
+  }
+});

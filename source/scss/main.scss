@@ -5,8 +5,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-
-
 /*Bootrap4 imports*/
 @import "config";
 @import "fonts/*.scss";
@@ -17,7 +15,11 @@
 @import "reboot";
 @import "modal";
 
-
 @import "global/**/*.scss";
 @import "blocks/**/*.scss";
 @import "ui/**/*.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
