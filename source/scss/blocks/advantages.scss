@@ -1,0 +1,213 @@
+.advantages {
+  background-image: url("/img/bg.jpg");
+  background-color: $black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 0 62px;
+
+  &-wrapper {
+    @include flex-column;
+    padding: 0 15px;
+  }
+}
+
+// --------- description
+.description {
+  @include flex-column;
+}
+
+.description__title {
+  @include title;
+  color: $white;
+  text-align: center;
+  max-width: 240px;
+}
+
+.description__text {
+  @include text;
+  color: $white;
+  padding-top: 20px;
+  text-align: center;
+  max-width: 675px;
+  margin: 0;
+}
+
+.advantages-list {
+  list-style-type: none;
+  @include flex-column;
+  gap: 50px;
+  padding: 50px 0;
+
+  &-item {
+    padding-top: 118px;
+    max-width: 395px;
+  }
+}
+
+.advantages__subtitle {
+  @include title;
+  text-align: center;
+  &_green {
+    color: $nvidia-green;
+  }
+  &_white {
+    color: $white;
+  }
+}
+
+.advantages__text {
+  @include text;
+  color: $gray-310;
+  padding-top: 12px;
+}
+
+// ----------- list-icons
+
+.advantages__icon-1 {
+  background-image: url("/img/icons/icon1-normal.svg");
+}
+
+.advantages__icon-1:hover,
+.advantages__icon-1:focus {
+  background-image: url("/img/icons/icon1-hover.svg");
+}
+
+.advantages__icon-2 {
+  background-image: url("/img/icons/icon2-normal.svg");
+}
+
+.advantages__icon-2:hover,
+.advantages__icon-2:focus {
+  background-image: url("/img/icons/icon2-hover.svg");
+}
+
+.advantages__icon-3 {
+  background-image: url("/img/icons/icon3-normal.svg");
+}
+
+.advantages__icon-3:hover,
+.advantages__icon-3:focus {
+  background-image: url("/img/icons/icon3-hover.svg");
+}
+
+.advantages__icon-4 {
+  background-image: url("/img/icons/icon4-normal.svg");
+}
+
+.advantages__icon-4:hover,
+.advantages__icon-4:focus {
+  background-image: url("/img/icons/icon4-hover.svg");
+}
+
+.advantages__icon-1,
+.advantages__icon-2,
+.advantages__icon-3,
+.advantages__icon-4 {
+  background-position: center top;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+
+.advantages__button {
+  padding: 18px 109px;
+  background-color: $nvidia-green;
+  font-family: "Play", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.25px;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px transparent;
+  border: 2px solid transparent;
+  transition: border-color 0.5s, box-shadow 0.5s, background-color 0.5s;
+
+  &:hover,
+  &:focus {
+    background: none;
+    color: $white;
+    border-color: $nvidia-green;
+    box-shadow: 0px 0px 10px $nvidia-green;
+  }
+}
+
+@media all and (min-width: 450px) {
+  .advantages-wrapper {
+    padding: 0 30px;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .advantages {
+    padding-bottom: 125px;
+  }
+
+  .description__title {
+    max-width: none;
+  }
+
+  .description__text {
+    max-width: 730px;
+  }
+
+  .advantages-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+    align-items: start;
+
+    &-item {
+      max-width: 255px;
+
+      &:first-child,
+      &:nth-child(3n) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 885px) {
+  .advantages-list {
+    &-item {
+      &:first-child,
+      &:nth-child(2n) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(3n),
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1145px) {
+  .advantages {
+    background-position: bottom right;
+    background-size: contain;
+  }
+
+  .advantages-wrapper {
+    padding: 0;
+  }
+
+  .advantages-list {
+    &-item {
+      &:first-child,
+      &:nth-child(2n),
+      &:nth-child(3n) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

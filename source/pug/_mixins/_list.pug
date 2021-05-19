@@ -1,9 +1,9 @@
 mixin list(values)
-  ul(class!=attributes.class)
+  ul(class!=attributes.class).advantages-list
     each val in values
-      li
-          img(src=val.icon)
-          span= val.titleGreen
-          |&#32;
-          span= val.titleWhite
-          p= val.text
+      li(class= `advantages-list-item ${val.className}`)
+          h2.advantages__subtitle
+              span.advantages__subtitle_green= val.titleGreen
+              |&#32;
+              span.advantages__subtitle_white= val.titleWhite
+          p.advantages__text= val.text

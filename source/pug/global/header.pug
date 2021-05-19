@@ -2,7 +2,8 @@ header.header
   .container
     .container_header
       .header-wrapper
-          img(src='img/logo.svg').logo
+          a(href='#').logo
+            img(src='img/logo.svg').logo-img
           img(src='img/icons/menu.svg' id='burger').burger-menu
 
       .navigation-wrapper#navigation-wrapper
@@ -17,8 +18,8 @@ header.header
 
           ul.social-media
               li.social-media__item
-                a(href='https://twitter.com/').social-media__link
-                    img(src='img/icons/icons-tw.svg' target='blank').social-media__icon
+                a(href='https://twitter.com/').social-media__link.social-media__link-twitter
+                  //- img(src='img/icons/icons-tw.svg' target='blank').social-media__icon
               li.social-media__item
-                  a(href='https://www.instagram.com/' target="blank").social-media__link
-                    img(src='img/icons/icons-inst.svg').social-media__icon
+                  a(href='https://www.instagram.com/' target="blank").social-media__link.social-media__link-instagram
+                    //- img(src='img/icons/icons-inst.svg').social-media__icon

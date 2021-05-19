@@ -5,9 +5,12 @@
 ul {
   margin: 0;
 }
-
 .logo {
-  width: 45px;
+  padding-top: 11px;
+
+  &-img {
+    width: 45px;
+  }
 }
 
 .header-wrapper {
@@ -60,7 +63,7 @@ ul {
 
   &:hover,
   &:focus {
-    color: $white;
+    color: $nvidia-green;
   }
 }
 
@@ -70,9 +73,47 @@ ul {
   list-style-type: none;
   gap: 12px;
   margin-bottom: 43px;
+
+  &__link {
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    &-twitter {
+      background-image: url("/img/icons/icons-tw.svg");
+
+      &:hover,
+      &:focus {
+        background-image: url("/img/icons/icons-tw-hover.svg");
+      }
+    }
+
+    &-instagram {
+      background-image: url("/img/icons/icons-inst.svg");
+
+      &:hover,
+      &:focus {
+        background-image: url("/img/icons/icons-inst-hover.svg");
+      }
+    }
+  }
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 450px) {
+  .header-wrapper {
+    padding: 10px 15px 0 30px;
+  }
+
+  .logo-img {
+    width: 60px;
+  }
+
+  .burger-menu {
+    width: 60px;
+  }
+}
+
+@media all and (min-width: 769px) {
   .header {
     padding: 15px;
     display: flex;
@@ -89,7 +130,11 @@ ul {
   }
 
   .logo {
-    width: 81px;
+    padding-top: 15px;
+
+    &-img {
+      width: 81px;
+    }
   }
 
   .burger-menu {
