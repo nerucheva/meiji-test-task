@@ -43,7 +43,7 @@ ul {
 }
 
 .navigation {
-  margin-top: 16px;
+  margin-top: 30px;
 }
 
 .navigation__list {
@@ -52,14 +52,15 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 28px;
+  gap: 27px;
 }
 
 .navigation__link {
   text-transform: uppercase;
+  @include text;
   text-decoration: none;
   color: $white;
-  font-size: 16px;
+  transition: color 0.5s;
 
   &:hover,
   &:focus {
@@ -81,6 +82,7 @@ ul {
 
     &-twitter {
       background-image: url("/img/icons/icons-tw.svg");
+      transition: 0.5s;
 
       &:hover,
       &:focus {
@@ -90,6 +92,7 @@ ul {
 
     &-instagram {
       background-image: url("/img/icons/icons-inst.svg");
+      transition: 0.5s;
 
       &:hover,
       &:focus {
@@ -100,10 +103,6 @@ ul {
 }
 
 @media all and (min-width: 450px) {
-  .header-wrapper {
-    padding: 10px 15px 0 30px;
-  }
-
   .logo-img {
     width: 60px;
   }
@@ -133,7 +132,7 @@ ul {
     padding-top: 15px;
 
     &-img {
-      width: 81px;
+      width: 88px;
     }
   }
 
@@ -155,11 +154,12 @@ ul {
 
   .navigation__list {
     flex-direction: row;
-    gap: 48px;
+    gap: 49px;
     padding: 0 38px;
   }
 
   .social-media {
     margin-bottom: 0;
+    padding-right: 15px;
   }
 }

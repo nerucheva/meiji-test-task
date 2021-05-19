@@ -1,0 +1,77 @@
+.modal-dialog {
+  max-width: 540px;
+}
+
+.modal-content {
+  border-radius: 0;
+  background-color: $black;
+  border: 2px solid #77b900;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px rgba(119, 185, 0, 0.5);
+}
+
+.modal-header {
+  padding: 5px;
+  justify-content: flex-end;
+  border-radius: 0;
+  border-bottom: none;
+}
+
+.modal-close-btn {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  background: {
+    image: url("/img/icons/cross-normal.svg");
+    repeat: no-repeat;
+    position: center;
+  }
+  padding: 0;
+  margin: 0 !important;
+  transition: background-image 0.5s;
+
+  &:hover,
+  &:focus {
+    background-image: url("/img/icons/cross-hover.svg");
+  }
+}
+
+.modal-body {
+  padding: 30px 15px 73px;
+}
+
+.modal-title {
+  @include title;
+  color: $white;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.modal-form {
+  padding-top: 20px;
+  @include flex-column;
+  gap: 20px;
+}
+
+.modal-textarea {
+  width: 100%;
+  max-width: 350px;
+  height: 56px;
+  padding-left: 20px;
+
+  &::placeholder {
+    @include text;
+    color: $black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal-submit-btn {
+  border: none;
+  padding: 15px 58px;
+  @include button;
+}
