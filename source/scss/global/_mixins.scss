@@ -28,15 +28,19 @@
 
 @mixin button {
   background-color: $nvidia-green;
-  font-family: "Play", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
+  font: {
+    family: "Play", sans-serif;
+    style: normal;
+    weight: bold;
+    size: 18px;
+  }
   line-height: 21px;
   letter-spacing: 0.25px;
   color: $white;
-  text-transform: uppercase;
-  text-decoration: none;
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
   box-shadow: 0px 0px 10px transparent;
   border: 2px solid transparent;
   transition: border-color 0.5s, box-shadow 0.5s, background-color 0.5s;

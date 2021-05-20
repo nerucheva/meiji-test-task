@@ -12,7 +12,6 @@
   }
 }
 
-// --------- description
 .description {
   @include flex-column;
 }
@@ -35,12 +34,16 @@
 .advantages-list {
   list-style-type: none;
   @include flex-column;
-  gap: 50px;
   padding: 50px 0;
 
   &-item {
     padding-top: 118px;
     max-width: 395px;
+    padding-bottom: 50px;
+  }
+
+  &-item:last-child {
+    padding-bottom: 0;
   }
 }
 
@@ -62,8 +65,6 @@
   color: $gray-310;
   padding-top: 12px;
 }
-
-// ----------- list-icons
 
 .advantages__icon-1 {
   background-image: url("/img/icons/icon1-normal.svg");
@@ -107,7 +108,7 @@
 .advantages__icon-4 {
   background-position: center top;
   background-repeat: no-repeat;
-  transition: 0.5s;
+  transition: background-image 0.5s;
 }
 
 .advantages__button {
@@ -123,7 +124,7 @@
 
 @media all and (min-width: 769px) {
   .advantages {
-    padding-bottom: 125px;
+    padding: 65px 0 125px;
   }
 
   .description__title {
@@ -135,14 +136,15 @@
   }
 
   .advantages-list {
+    max-width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
 
     &-item {
       max-width: 255px;
+      padding-bottom: 0;
 
       &:first-child,
       &:nth-child(3n) {

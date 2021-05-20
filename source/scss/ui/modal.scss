@@ -5,9 +5,9 @@
 .modal-content {
   border-radius: 0;
   background-color: $black;
-  border: 2px solid #77b900;
+  border: 2px solid $nvidia-green;
   box-sizing: border-box;
-  box-shadow: 0px 0px 20px rgba(119, 185, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba($nvidia-green, 0.5);
 }
 
 .modal-header {
@@ -51,18 +51,22 @@
 .modal-form {
   padding-top: 20px;
   @include flex-column;
-  gap: 20px;
 }
 
-.modal-textarea {
+.modal-input {
   width: 100%;
   max-width: 350px;
   height: 56px;
   padding-left: 20px;
+  margin-bottom: 20px;
 
   &::placeholder {
     @include text;
     color: $black;
+  }
+
+  &::-moz-placeholder {
+    line-height: 56px;
   }
 
   &:focus {

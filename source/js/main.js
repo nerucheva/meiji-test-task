@@ -1,36 +1,17 @@
-// Для добавления функционала используем классы с префиксом js, стилизовать по этим классам нельзя
-
 $(document).ready(function () {
-  // $('input[type=tel]')
-  //   .inputmask("8 (999) 999 99 99");
-  // $('.js-popup-img')
-  //   .magnificPopup({
-  //     type:'image',
-  //     closeOnContentClick: true,
-  //     fixedContentPos: true,
-  //     mainClass: 'mfp-no-margins mfp-with-zoom',
-  //     image: {
-  //       verticalFit: true
-  //     },
-  //     zoom: {
-  //       enabled: true,
-  //       duration: 300
-  //     }
-  //   });
-});
+  const burger = $("#burger");
+  const navigationWrapper = $("#navigation-wrapper");
+  const body = $("#body");
 
-const burger = document.getElementById("burger");
-const navigationWrapper = document.getElementById("navigation-wrapper");
-const body = document.getElementById("body");
-
-burger.addEventListener("click", () => {
-  if (burger.classList.contains("burger-menu_active")) {
-    burger.classList.remove("burger-menu_active");
-    navigationWrapper.classList.remove("navigation-wrapper_opened");
-    body.classList.remove("body-overflow");
-  } else {
-    burger.classList.add("burger-menu_active");
-    navigationWrapper.classList.add("navigation-wrapper_opened");
-    body.classList.add("body-overflow");
-  }
+  burger.on("click", function () {
+    if (burger.hasClass("burger-menu_active")) {
+      burger.removeClass("burger-menu_active");
+      navigationWrapper.removeClass("navigation-wrapper_opened");
+      body.removeClass("body-overflow");
+    } else {
+      burger.addClass("burger-menu_active");
+      navigationWrapper.addClass("navigation-wrapper_opened");
+      body.addClass("body-overflow");
+    }
+  });
 });
