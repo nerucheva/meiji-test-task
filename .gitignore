@@ -11,6 +11,7 @@ dist
 desktop.ini
 .DS_Store
 .DS_Store?
+Thumbs.db
 .Trashes
 
 # IDE Files
