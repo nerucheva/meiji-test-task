@@ -88,22 +88,22 @@ ul {
     margin: 3px 0 0 11px;
 
     &-twitter {
-      background-image: url("/img/icons/icons-tw.svg");
+      background-image: url("../img/icons/icons-tw.svg");
       transition: background-image 0.5s;
 
       &:hover,
       &:focus {
-        background-image: url("/img/icons/icons-tw-hover.svg");
+        background-image: url("../img/icons/icons-tw-hover.svg");
       }
     }
 
     &-instagram {
-      background-image: url("/img/icons/icons-inst.svg");
+      background-image: url("../img/icons/icons-inst.svg");
       transition: background-image 0.5s;
 
       &:hover,
       &:focus {
-        background-image: url("/img/icons/icons-inst-hover.svg");
+        background-image: url("../img/icons/icons-inst-hover.svg");
       }
     }
   }

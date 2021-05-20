@@ -23,7 +23,7 @@
   background-color: transparent;
   border: none;
   background: {
-    image: url("/img/icons/cross-normal.svg");
+    image: url("../img/icons/cross-normal.svg");
     repeat: no-repeat;
     position: center;
   }
@@ -33,7 +33,7 @@
 
   &:hover,
   &:focus {
-    background-image: url("/img/icons/cross-hover.svg");
+    background-image: url("../img/icons/cross-hover.svg");
   }
 }
 
